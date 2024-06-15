@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/primary"
+    tools:context=".MainActivity">
+
+    <TextView
+
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:textStyle="bold"
+
+        />
+
+
+    <EditText
+
+        android:id="@+id/usernametext"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Enter your username"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:id="@+id/emailtext"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Enter your email"
+        />
+
+    <EditText
+        android:id="@+id/passwordtext"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Enter your password"
+
+        />
+
+    <EditText
+        android:id="@+id/uniqueid"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Enter your uniqueid"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:textSize="30dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:elevation="20dp"
+        android:id="@+id/signupbtn"
+        />
+
+    <TextView
+        android:id="@+id/signinpage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="32dp"
+        android:textColor="@color/black"
+        android:text="SignIn"
+        android:textAlignment="center"
+        />
+
+
+</LinearLayout>
