@@ -24,10 +24,22 @@
         android:id="@+id/txtusername"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:hint="Enter your uniqueid"
+        android:hint="Enter your username"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="30dp"
         />
+
+
+
+    <EditText
+        android:id="@+id/txtpassword"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Enter your password"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+        />
+
 
 
 
