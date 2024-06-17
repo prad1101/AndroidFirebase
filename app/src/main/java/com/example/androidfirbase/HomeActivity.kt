@@ -17,9 +17,6 @@ class HomeActivity : AppCompatActivity() {
         val id=intent.getStringExtra(MainActivity.KEY3)
 
         val welcometext:TextView = findViewById<TextView>(R.id.welcome)
-
         welcometext.text="Welcome"+name;
-
-
     }
 }
