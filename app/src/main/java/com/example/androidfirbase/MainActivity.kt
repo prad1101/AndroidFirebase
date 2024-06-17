@@ -61,20 +61,21 @@ class MainActivity : AppCompatActivity() {
 
     private fun readData(username:String, userpassword:String){
         Toast.makeText(this,username,Toast.LENGTH_SHORT).show()
+
         _databaserefrence=FirebaseDatabase.getInstance().getReference("Users")
+
         _databaserefrence.child(username).get().addOnSuccessListener {
+
             // if user exist or not
             if(it.exists()){
 
                 val dbpassword=it.child("password").value.toString();
-                if(userpassword==dbpassword){
 
+                if(userpassword==dbpassword){
                     // welcome user in your app, with intent and data
                     val username = it.child("name").value;
                     val email    = it.child("email").value;
                     val userid   = it.child("uniqueid").value;
-
-
                     val intentWelcome = Intent(this, HomeActivity::class.java)
 
                     intentWelcome.putExtra(KEY1, email.toString())

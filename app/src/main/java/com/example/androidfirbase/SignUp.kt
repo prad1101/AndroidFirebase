@@ -23,7 +23,7 @@ class SignUp : AppCompatActivity() {
         val emailtext: EditText =findViewById<EditText>(R.id.emailtext)
         val usertext: EditText =findViewById<EditText>(R.id.usernametext)
         val passwordtext: EditText =findViewById<EditText>(R.id.passwordtext)
-        val uniqueid: EditText =findViewById<EditText>(R.id.uniqueid)
+        val uniqueId: EditText =findViewById<EditText>(R.id.uniqueid)
         val signbtn: Button =findViewById<Button>(R.id.signupbtn)
         val siginpage:TextView = findViewById<TextView>(R.id.signinpage)
 
@@ -32,23 +32,21 @@ class SignUp : AppCompatActivity() {
             val name=usertext.text.toString()
             val email=emailtext.text.toString()
             val pass=passwordtext.text.toString()
-            val uniqueId=uniqueid.text.toString()
+            val uniqueid=uniqueId.text.toString()
 
-            var user=User(name,email,pass,uniqueId);
+            var user=User(name,email,pass,uniqueid);
 
             database= FirebaseDatabase.getInstance().getReference("Users")
-
-            database.child(uniqueId).setValue(user).addOnSuccessListener {
-
+            Toast.makeText(this,"as", Toast.LENGTH_SHORT).show()
+            database.child(name).setValue(user).addOnSuccessListener {
                 usertext.text.clear()
                 emailtext.text.clear()
                 passwordtext.text.clear()
-                uniqueid.text.clear()
-
+                uniqueId.text.clear()
                 Toast.makeText(this,"User Registered", Toast.LENGTH_SHORT).show()
 
-            }.addOnSuccessListener {
-                Toast.makeText(this,"Failed", Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener {
+                Toast.makeText(this,it.message.toString(), Toast.LENGTH_SHORT).show()
             }
 
         }
